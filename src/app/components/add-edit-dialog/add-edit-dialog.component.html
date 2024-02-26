@@ -1,0 +1,81 @@
+<h1 mat-dialog-title>{{ data ? "Update" : "Add" }} Employee</h1>
+<form [formGroup]="_empForm" (ngSubmit)="onFormSubmit()">
+  <mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" formControlName="lastName" />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email Address" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+
+      <mat-form-field >
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field color="accent" appearance="outline">
+        <input matInput placeholder="Home Address" formControlName="address" />
+        <mat-label>Address</mat-label>
+      </mat-form-field>
+
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input
+          matInput
+          placeholder="phone"
+          type="number"
+          formControlName="phone"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Salary</mat-label>
+        <input
+          matInput
+          placeholder="Salary"
+          type="number"
+          formControlName="salary"
+        />
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      {{ data ? "Update" : "Save" }}
+    </button>
+  </mat-dialog-actions>
+</form>

@@ -1,0 +1,30 @@
+main{
+    max-width: 1350px;
+    margin: 0 auto;
+
+    h1{
+        text-decoration: underline;
+
+    }
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// manager.component.scss
+
+// Styles for the female icon
+.female-icon {
+    // Add your styles for the female icon here
+    color: deeppink; // Example color
+  }
+  
+  // Styles for the male icon
+  .male-icon {
+    // Add your styles for the male icon here
+    color: deepskyblue; // Example color
+  }
+  
