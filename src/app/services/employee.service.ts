@@ -17,9 +17,7 @@ interface Employee {
 @Injectable({
   providedIn: 'root',
 })
-
 export class EmployeeService {
-
   private localStorageKey = 'employees';
 
   constructor() {}

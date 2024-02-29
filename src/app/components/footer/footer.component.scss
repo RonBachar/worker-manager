@@ -1,29 +1,28 @@
-.mat-toolbar{
-    padding: 0 150px;
+.mat-toolbar {
+  padding: 0 150px;
 }
 .spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .fa {
-    padding: 10px;
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  .fa:hover {
+    color: black;
+  }
 }
 
-.fa:hover {
-    color: black;
-}
-
-.fa-facebook {
-    color: black;
-}
-
-.fa-twitter {
-    color: black;
+.fa-github {
+  color: #607D8B;
 }
 
 .fa-linkedin {
-    color: black;
+  color: #607D8B;
 }
+.fa-address-card {
+  color: #607D8B;
+}
+
